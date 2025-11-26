@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Memphis Bar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400&display=swap');
+
+        body {
+            background-color: #000;
+            color: #d4af37;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            max-width: 220px;
+            margin: 0 auto 20px auto;
+            display: block;
+            filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.4));
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ffd700, #fffacd, #ffd700);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+
+        .divider {
+            width: 120px;
+            height: 3px;
+            background: #d4af37;
+            margin: 15px auto 30px;
+            border-radius: 2px;
+        }
+
+        /* Menus déroulants */
+        .accordion {
+            background-color: rgba(212, 175, 55, 0.05);
+            color: #d4af37;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-left: 3px solid #ffd700;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .accordion:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: rgba(0,0,0,0.8);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-left: 3px solid #ffd700;
+            border-radius: 0 5px 5px 0;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        ul li {
+            background: rgba(255, 215, 0, 0.05);
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-left: 3px solid #ffd700;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .special-section {
+            margin-top: 30px;
+        }
+
+        .special-section h3 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="Memphis_logo.png" alt="Logo Memphis Bar" class="logo">
+        
+        <h1>Memphis Bar</h1>
+        <div class="divider"></div>
+
+        <!-- Menu déroulant : Description de la compagnie -->
+        <button class="accordion">Description de la compagnie</button>
+        <div class="panel">
+            <p>
+                Le Memphis Bar est un établissement luxueux situé au cœur de Nashville. 
+                Nous offrons une ambiance élégante, un style raffiné et une atmosphère chaleureuse.
+                Que ce soit pour savourer un whisky rare, un champagne haut de gamme ou profiter d’un moment entre amis,
+                notre bar incarne le mélange parfait entre classe et confort.
+            </p>
+        </div>
+
+        <!-- Menu déroulant : Histoire du propriétaire -->
+        <button class="accordion">Histoire du propriétaire</button>
+        <div class="panel">
+            <p>
+                Le propriétaire du Memphis Bar,  Mr Raspadoni , passionné par les spiritueux et le style élégant,
+                a réouvert le bar pour créer un lieu unique à Nashville. Fort de son expérience
+                dans la restauration et de ses connaissances dans le domaine de l'alcool , il veille personnellement à offrir
+                un service irréprochable , un alcool de qualité et une ambiance raffinée pour chaque visiteur.
+            </p>
+        </div>
+
+        <!-- Menu déroulant : Histoire du bar -->
+        <button class="accordion">Histoire du bar</button>
+        <div class="panel">
+            <p>
+                Le Memphis Bar a été fondé il y a plusieurs années avec pour but de couvrir une activité de contrebande et
+                de vente de drogue de Nashville. Depuis son rachat par Mr Raspadoni il attire une clientèle 
+                fidèle grâce à son ambiance luxueuse, sa carte de boissons d’exception , son cadre unique et surtout cette odeur
+                de poudre a canon dans l'air . 
+            </p>
+        </div>
+
+        <!-- Menu du bar -->
+        <h2>Notre Carte</h2>
+        <ul>
+            <li>Rhum — 15$</li>
+            <li>Whiskey — 20$</li>
+            <li>Bière — 5$</li>
+            <li>Champagne — 130$</li>
+        </ul>
+
+        <!-- Section spéciale cocktails -->
+        <div class="special-section">
+            <h3>Section Spéciale Cocktails</h3>
+            <ul>
+                <li>Le Ricardo — 25$</li>
+                <li> Le Fondy — 22$</li>
+                <li> Le Clinton — 30$</li>
+                <li>Le Tyson — 50$</li>
+            </ul>
+        </div>
+
+        <footer><li>© Memphis Bar — 2025</li><li>8-293-49-068</li><li>Ouvert de 18h a 23h</li></footer>
+    </div>
+
+    <script>
+        // Script pour ouvrir/fermer les menus déroulants
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
